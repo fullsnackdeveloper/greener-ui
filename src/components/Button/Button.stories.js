@@ -5,16 +5,16 @@ import Button from "./";
 storiesOf("Button", module).add("default", () => (
   <div>
     <div className="story-spacer">
-      <Button type="primary">Click this</Button>
+      <Button type="primary">Primary</Button>
     </div>
     <div className="story-spacer">
-      <Button type="secondary">Click this</Button>
+      <Button type="secondary">Secondary</Button>
     </div>
     <div className="story-spacer">
-      <Button type="tertiary">Click this</Button>
+      <Button type="tertiary">Tertiary</Button>
     </div>
     <div className="story-spacer">
-      <Button type="disabled">Click this</Button>
+      <Button type="disabled">Disabled</Button>
     </div>
   </div>
 ));
