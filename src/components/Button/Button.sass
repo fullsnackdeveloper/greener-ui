@@ -42,17 +42,30 @@
         background: $lightGreen
         border-radius: 100px
         box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1)
+        transition: all 0.2s linear
+
+        &:hover
+            box-shadow: 0 0 0 rgba(0, 0, 0, 0)
 
     &.secondary
         color: $lightGreen
         border: 1px solid $lightGreen
         border-radius: 100px
+        transition: all 0.2s linear
+
+        &:hover
+            color: $white
+            background: $lightGreen
     
     &.tertiary
         color: $white
         background: $grey
         border-radius: 100px
         box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1)
+        transition: all 0.2s linear
+
+        &:hover
+            box-shadow: 0 0 0 rgba(0, 0, 0, 0)
 
     &.disabled
         color: $white
