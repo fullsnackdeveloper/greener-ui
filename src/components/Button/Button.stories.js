@@ -100,4 +100,60 @@ storiesOf("Button", module)
         />
       </div>
     </div>
+  ))
+  .add("on color", () => (
+    <div style={{ background: "#20B9B6", padding: 10, display: "flex" }}>
+      <div>
+        <div className="story-spacer">
+          <Button type="primary" onColor>
+            Primary
+          </Button>
+        </div>
+        <div className="story-spacer">
+          <Button type="secondary" onColor>
+            Secondary
+          </Button>
+        </div>
+        <div className="story-spacer">
+          <Button type="tertiary" onColor>
+            Tertiary
+          </Button>
+        </div>
+        <div className="story-spacer">
+          <Button type="disabled" onColor>
+            Disabled
+          </Button>
+        </div>
+      </div>
+      <div>
+        <div className="story-spacer">
+          <Button
+            type="primary"
+            onColor
+            icon={{ symbol: "chevron-right", position: "right" }}
+          />
+        </div>
+        <div className="story-spacer">
+          <Button
+            type="secondary"
+            onColor
+            icon={{ symbol: "chevron-left", position: "right" }}
+          />
+        </div>
+        <div className="story-spacer">
+          <Button
+            type="tertiary"
+            onColor
+            icon={{ symbol: "plus", position: "right" }}
+          />
+        </div>
+        <div className="story-spacer">
+          <Button
+            type="disabled"
+            onColor
+            icon={{ symbol: "account-plus", position: "right" }}
+          />
+        </div>
+      </div>
+    </div>
   ));

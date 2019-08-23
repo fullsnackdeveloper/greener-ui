@@ -7,10 +7,8 @@
     padding: 0.6rem 1.8rem
     cursor: pointer
     position: relative
-    overflow: hidden
     transform: translate3d(0, 0, 0)
     outline: none
-    background-position: center
     display: flex
     align-items: center
 
@@ -41,6 +39,7 @@
         border: 1px solid $lightGreen
         border-radius: 100px
         transition: all 0.5s linear
+        background: rgba(255, 255, 255, 0) radial-gradient(circle, transparent 1%, rgba(255, 255, 255, 0) 1%) center/15000%
 
         span
             color: $lightGreen
@@ -124,4 +123,44 @@
                 color: $lightGreen
             
             &:hover i
+                color: $white
+
+    // ON COLOR
+
+    &.onColor
+
+        &.primary
+            background: $white radial-gradient(circle, transparent 1%, $white 1%) center/15000%
+
+            &:hover
+                background: $offWhite radial-gradient(circle, transparent 1%, $offWhite 1%) center/15000%
+
+            &:active
+                background-color: $lightGreen
+                background-size: 100%
+
+            span, i
+                color: $lightGreen
+
+        &.secondary
+            border: 1px solid $white
+            border-radius: 100px
+            transition: all 0.5s linear
+            background: rgba(255, 255, 255, 0) radial-gradient(circle, transparent 1%, rgba(255, 255, 255, 0) 1%) center/15000%
+
+            span
+                color: $white
+
+            &:hover
+                background: $white radial-gradient(circle, transparent 1%, $white 1%) center/15000%
+
+                span, i
+                    color: $lightGreen
+
+            &:active
+                background-color: $lightGreen
+                background-size: 100%
+                transition: background 0s
+
+            i
                 color: $white
