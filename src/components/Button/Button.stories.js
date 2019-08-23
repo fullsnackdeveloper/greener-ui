@@ -75,4 +75,29 @@ storiesOf("Button", module)
         </div>
       </div>
     </div>
+  ))
+  .add("icons", () => (
+    <div>
+      <div className="story-spacer">
+        <Button
+          type="primary"
+          icon={{ symbol: "chevron-right", position: "right" }}
+        />
+      </div>
+      <div className="story-spacer">
+        <Button
+          type="secondary"
+          icon={{ symbol: "chevron-left", position: "right" }}
+        />
+      </div>
+      <div className="story-spacer">
+        <Button type="tertiary" icon={{ symbol: "plus", position: "right" }} />
+      </div>
+      <div className="story-spacer">
+        <Button
+          type="disabled"
+          icon={{ symbol: "account-plus", position: "right" }}
+        />
+      </div>
+    </div>
   ));
