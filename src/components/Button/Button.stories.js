@@ -17,6 +17,9 @@ storiesOf("Button", module)
       <div className="story-spacer">
         <Button type="disabled">Disabled</Button>
       </div>
+      <div className="story-spacer">
+        <Button type="white">Disabled</Button>
+      </div>
     </div>
   ))
   .add("sizes", () => (
@@ -39,6 +42,9 @@ storiesOf("Button", module)
           <Button type="disabled" size="large">
             Large
           </Button>
+        </div>
+        <div className="story-spacer">
+          <Button type="white">Regular White</Button>
         </div>
       </div>
       <div>
@@ -66,6 +72,12 @@ storiesOf("Button", module)
           <Button
             type="disabled"
             size="large"
+            icon={{ symbol: "account-plus", position: "right" }}
+          />
+        </div>
+        <div className="story-spacer">
+          <Button
+            type="white"
             icon={{ symbol: "account-plus", position: "right" }}
           />
         </div>
@@ -104,6 +116,11 @@ storiesOf("Button", module)
             icon={{ symbol: "plus", position: "left" }}
           >
             Disabled
+          </Button>
+        </div>
+        <div className="story-spacer">
+          <Button type="white" icon={{ symbol: "plus", position: "left" }}>
+            Regular white
           </Button>
         </div>
       </div>
@@ -138,6 +155,11 @@ storiesOf("Button", module)
             Disabled
           </Button>
         </div>
+        <div className="story-spacer">
+          <Button type="white" icon={{ symbol: "plus", position: "left" }}>
+            White
+          </Button>
+        </div>
       </div>
       <div>
         <div className="story-spacer">
@@ -161,6 +183,11 @@ storiesOf("Button", module)
         <div className="story-spacer">
           <Button type="disabled" icon={{ symbol: "plus", position: "right" }}>
             Disabled
+          </Button>
+        </div>
+        <div className="story-spacer">
+          <Button type="white" icon={{ symbol: "plus", position: "right" }}>
+            White
           </Button>
         </div>
       </div>
@@ -189,6 +216,9 @@ storiesOf("Button", module)
           icon={{ symbol: "account-plus", position: "right" }}
         />
       </div>
+      <div className="story-spacer">
+        <Button type="white" icon={{ symbol: "arrow-up", position: "right" }} />
+      </div>
     </div>
   ))
   .add("on color", () => (
@@ -211,6 +241,11 @@ storiesOf("Button", module)
         </div>
         <div className="story-spacer">
           <Button type="disabled" onColor>
+            Disabled
+          </Button>
+        </div>
+        <div className="story-spacer">
+          <Button type="white" onColor>
             Disabled
           </Button>
         </div>
@@ -240,6 +275,13 @@ storiesOf("Button", module)
         <div className="story-spacer">
           <Button
             type="disabled"
+            onColor
+            icon={{ symbol: "account-plus", position: "right" }}
+          />
+        </div>
+        <div className="story-spacer">
+          <Button
+            type="white"
             onColor
             icon={{ symbol: "account-plus", position: "right" }}
           />
