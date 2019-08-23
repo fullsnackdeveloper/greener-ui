@@ -19,6 +19,96 @@ storiesOf("Button", module)
       </div>
     </div>
   ))
+  .add("sizes", () => (
+    <div style={{ display: "flex" }}>
+      <div>
+        <div className="story-spacer">
+          <Button type="primary" size="tiny">
+            Tiny
+          </Button>
+        </div>
+        <div className="story-spacer">
+          <Button type="secondary" size="small">
+            Small
+          </Button>
+        </div>
+        <div className="story-spacer">
+          <Button type="tertiary">Regular</Button>
+        </div>
+        <div className="story-spacer">
+          <Button type="disabled" size="large">
+            Large
+          </Button>
+        </div>
+      </div>
+      <div>
+        <div className="story-spacer">
+          <Button
+            type="primary"
+            size="tiny"
+            icon={{ symbol: "chevron-right", position: "right" }}
+          />
+        </div>
+        <div className="story-spacer">
+          <Button
+            type="secondary"
+            size="small"
+            icon={{ symbol: "chevron-left", position: "right" }}
+          />
+        </div>
+        <div className="story-spacer">
+          <Button
+            type="tertiary"
+            icon={{ symbol: "plus", position: "right" }}
+          />
+        </div>
+        <div className="story-spacer">
+          <Button
+            type="disabled"
+            size="large"
+            icon={{ symbol: "account-plus", position: "right" }}
+          />
+        </div>
+      </div>
+      <div>
+        <div className="story-spacer">
+          <Button
+            type="primary"
+            size="tiny"
+            icon={{ symbol: "plus", position: "left" }}
+          >
+            Primary
+          </Button>
+        </div>
+        <div className="story-spacer">
+          <Button
+            type="secondary"
+            size="small"
+            icon={{ symbol: "view-dashboard", position: "left" }}
+          >
+            Secondary
+          </Button>
+        </div>
+        <div className="story-spacer">
+          <Button
+            type="tertiary"
+            icon={{ symbol: "compare", position: "left" }}
+          >
+            Tertiary
+          </Button>
+        </div>
+        <div className="story-spacer">
+          <Button
+            type="disabled"
+            size="large"
+            icon={{ symbol: "plus", position: "left" }}
+          >
+            Disabled
+          </Button>
+        </div>
+      </div>
+    </div>
+  ))
   .add("with icon", () => (
     <div style={{ display: "flex" }}>
       <div>
