@@ -5,9 +5,6 @@
     margin: 0
     border: none
     background: transparent
-    font-family: $text
-    text-transform: uppercase
-    letter-spacing: 1px
     padding: 0.6rem 1.8rem
     cursor: pointer
     position: relative
@@ -15,31 +12,18 @@
     transform: translate3d(0, 0, 0)
     outline: none
     background-position: center
+    display: flex
+    align-items: center
 
-    // &:after
-    //     content: ''
-    //     display: block
-    //     position: absolute
-    //     background: $black
-    //     width: 100%
-    //     height: 100%
-    //     top: 0
-    //     left: 0
-    //     pointer-events: none
-    //     background-image: radial-gradient(circle, transparent 10%, #fff 10.01%)
-    //     background-repeat: no-repeat
-    //     background-position: 50%
-    //     transform: scale(10, 10)
-    //     opacity: 0
-    //     transition: transform .5s, opacity 0.6s
-
-    // &:active:after
-    //     transform: scale(0, 0)
-    //     opacity: .3
-    //     transition: 0s
+    span
+        order: 2
+        font-family: $text
+        text-transform: uppercase
+        letter-spacing: 1px
+        color: $white
+        transition: color 0.5s linear
 
     &.primary
-        color: $white
         background: $lightGreen radial-gradient(circle, transparent 1%, $lightGreen 1%) center/15000%
         border-radius: 100px
         box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1)
@@ -55,14 +39,18 @@
             transition: background 0s
 
     &.secondary
-        color: $lightGreen
         border: 1px solid $lightGreen
         border-radius: 100px
-        transition: all 0.2s linear
+        transition: all 0.5s linear
+
+        span
+            color: $lightGreen
 
         &:hover
-            color: $white
             background: $lightGreen radial-gradient(circle, transparent 1%, $lightGreen 1%) center/15000%
+
+            span
+                color: $white
 
         &:active
             background-color: $lighterGreen
@@ -70,20 +58,47 @@
             transition: background 0s
     
     &.tertiary
-        color: $white
-        background: $grey
+        background: $grey radial-gradient(circle, transparent 1%, $grey 1%) center/15000%
         border-radius: 100px
         box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1)
-        transition: all 0.2s linear
+        transition: all 0.5s linear
 
         &:hover
             box-shadow: 0 0 0 rgba(0, 0, 0, 0)
+            background: $darkGrey radial-gradient(circle, transparent 1%, $darkGrey 1%) center/15000%
+
+        &:active
+            background-color: $grey
+            background-size: 100%
+            transition: background 0s
 
     &.disabled
-        color: $white
         background: $lightGrey
         border-radius: 100px
         cursor: not-allowed
 
         &:active:after
             display: none
+
+    // WITH ICON
+
+    &.withIcon
+
+        i
+            display: inline-block
+            line-height: 14px
+            margin: 0.5px 6px 0 -4px
+            color: $white
+            transition: color 0.5s linear
+
+        &.secondary 
+            i
+                color: $lightGreen
+
+            &:hover i
+                color: $white
+
+        &.iconRight i
+            order: 3
+            margin-left: 6px
+            margin-right: -4px
