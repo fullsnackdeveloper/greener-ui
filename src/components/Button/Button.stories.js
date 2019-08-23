@@ -2,7 +2,7 @@ import { storiesOf } from "@storybook/react";
 import React from "react";
 import Button from "./";
 
-storiesOf("Button", module)
+storiesOf("Basic | Button", module)
   .add("default", () => (
     <div>
       <div className="story-spacer">
