@@ -20,6 +20,10 @@
         color: $white
         transition: color 0.5s linear
 
+    &.fullwidth
+        width: 100%
+        justify-content: center
+
     &.primary
         background: $lightGreen radial-gradient(circle, transparent 1%, $lightGreen 1%) center/15000%
         border-radius: 100px
@@ -158,6 +162,7 @@
             color: $white
             transition: color 0.5s linear
 
+
         &.secondary 
             i
                 color: $lightGreen
@@ -176,6 +181,15 @@
             order: 3
             margin-left: 6px
             margin-right: -4px
+
+        &.atEdge i
+            position: absolute
+            left: 20px
+
+        &.atEdge.iconRight i
+            right: 10px
+            left: initial
+            transform: translateX(-100%)
 
 
     // ICON BUTTON

@@ -4,20 +4,23 @@ import classNames from "classnames";
 import "./Button.sass";
 
 export default class Button extends Component {
-  static deafultProps = {
+  static defaultProps = {
     type: "primary",
     size: "regular",
     icon: null,
-    onColor: false
+    onColor: false,
+    fullwidth: false
   };
 
   render() {
-    const { children, type, icon, onColor, size } = this.props;
-    let classes = classNames("Button", type, size, {
+    const { children, type, icon, onColor, size, fullwidth } = this.props;
+    let classes = classNames("Button", type, size, fullwidth, {
       withIcon: icon && children,
       iconRight: icon && icon.position === "right",
+      atEdge: icon && icon.atEdge,
       iconButton: icon && !children,
-      onColor
+      onColor,
+      fullwidth
     });
     return (
       <button className={classes}>

@@ -288,4 +288,36 @@ storiesOf("Button", module)
         </div>
       </div>
     </div>
+  ))
+  .add("fullwidth", () => (
+    <div>
+      <div className="story-spacer">
+        <Button fullwidth icon={{ symbol: "google" }}>
+          Fullwidth
+        </Button>
+      </div>
+      <div className="story-spacer">
+        <Button
+          type="secondary"
+          fullwidth
+          icon={{ symbol: "facebook", position: "right" }}
+        >
+          Fullwidth
+        </Button>
+      </div>
+      <div className="story-spacer">
+        <Button fullwidth icon={{ symbol: "google", atEdge: true }}>
+          Fullwidth
+        </Button>
+      </div>
+      <div className="story-spacer">
+        <Button
+          type="secondary"
+          fullwidth
+          icon={{ symbol: "facebook", atEdge: true, position: "right" }}
+        >
+          Fullwidth
+        </Button>
+      </div>
+    </div>
   ));
