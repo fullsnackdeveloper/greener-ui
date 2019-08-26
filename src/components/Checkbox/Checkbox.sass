@@ -1,0 +1,65 @@
+@import "../../styles/_variables.scss"
+    
+.Checkbox
+    transition: all 0.5s linear
+    font-family: $text
+    color: $black
+    font-size: 12px
+    position: relative
+    display: flex
+    align-items: center
+    -webkit-user-select: none
+    -moz-user-select: none
+    -ms-user-select: none
+    user-select: none
+
+    &:before
+        position: absolute
+        content: ''
+        width: 25px
+        height: 25px
+        background: $white radial-gradient(circle, transparent 1%, $white 1%) center/15000%
+        top: -6px
+        left: -3px
+        border-radius: 50%
+        z-index: -1
+        transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94)
+
+    &:not(.checked):before
+        background-color: $lightGreen
+        background-size: 80%
+        transition: background 0s
+    
+    &::placeholder
+        color: $blueGrey
+
+    &:focus
+        border: 1px solid $lightGreen
+
+    &.fullwidth
+        width: calc(100% - 2.4rem)
+
+    &.checked
+
+        i
+            color: $lightGreen
+
+    input
+        position: absolute
+        opacity: 0
+        cursor: pointer
+        height: 0
+        width: 0
+
+    span
+        margin-left: 25px
+        font-size: 14px
+        color: $grey
+
+    i
+        position: absolute
+        left: 1px
+        top: -2px
+        font-size: 18px
+        color: $offWhite
+        line-height: 16px
