@@ -1,0 +1,57 @@
+@import "../../styles/_variables.scss"
+    
+.Card
+    border: 1px solid $offWhite
+    border-radius: $borderRadius
+    max-width: 600px
+    position: relative
+
+    *:last-child
+        border-bottom: none
+
+    &-Header
+        padding: $cardPadding
+        border-bottom: 1px solid $offWhite
+        display: flex
+        justify-content: space-between
+
+    &-Tagline
+        padding: $cardPadding
+
+        *
+            margin: 0
+        
+        font-size: 12px
+        line-height: 20px
+
+    &-Image
+        width: 100%
+        position: relative
+
+        &-image
+            position: absolute
+            top: 0
+            left: 0
+            right: 0
+            bottom: 0
+            background-size: cover
+            background-position: center center
+
+        &:after
+            content: ''
+            display: block
+            padding-top: 54.6%
+
+    &-Title
+        padding: $cardPadding
+        background: $almostWhite
+
+        h2
+            margin: 10px 0
+            font-size: 16px
+            font-weight: 500
+
+    .bookmark
+        position: absolute
+        top: 10px
+        right: 10px
