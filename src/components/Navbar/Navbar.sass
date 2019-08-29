@@ -1,0 +1,77 @@
+@import "../../styles/_variables.scss"
+    
+.Navbar
+
+    &-container
+        max-width: $maxWidth
+        margin: 0 auto
+        display: flex
+        justify-content: space-between
+        background: $white
+
+    &-nav
+        flex-grow: 1
+        display: flex
+        align-items: center
+
+        .Navbar-logo
+            width: 80px
+            margin-right: 60px
+
+            img
+                width: 100%
+
+        ul
+            display: flex
+
+            li
+                margin-right: 50px
+                display: inline
+
+                &.hasSubMenu
+                    display: flex
+                    align-items: center
+                    position: relative
+
+                    i
+                        margin-left: 4px
+                        line-height: 0
+
+                    .subMenu
+                        transform: translateY(-20px)
+                        opacity: 0
+                        position: absolute
+                        top: 0
+                        pointer-events: none
+                        transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), opacity 0.4s linear
+
+                        ul
+                            margin-top: 30px
+                            flex-direction: column
+                            display: flex
+                            padding: $cardPadding 20px
+                            border-radius: $borderRadius
+                            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1)
+                            text-align: left
+
+                            li
+                                margin: 0
+
+                    &:hover
+
+                        .subMenu
+                            transform: translateY(0)
+                            opacity: 1
+                            pointer-events: initial
+
+                a
+                    text-transform: uppercase
+                    letter-spacing: 1px
+                    text-decoration: none
+                    font-size: 12px
+                    font-weight: 400
+                    transition: all 0.2s linear
+                    cursor: pointer
+
+                    &:hover
+                        color: $green

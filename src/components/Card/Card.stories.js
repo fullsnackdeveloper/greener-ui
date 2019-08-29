@@ -4,9 +4,14 @@ import Card from "./";
 import Avatar from "../Avatar";
 import Meta from "../Meta";
 import ActionBar from "../ActionBar";
+import { ListItem } from "../List";
 
 const avatar = (
   <Avatar image="https://images.unsplash.com/photo-1498507201412-ab62bad37273?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=700&q=80" />
+);
+
+const avatar2 = (
+  <Avatar image="https://images.unsplash.com/photo-1531750026848-8ada78f641c2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80" />
 );
 
 storiesOf("Basic | Card", module).add("default", () => (
@@ -32,6 +37,15 @@ storiesOf("Basic | Card", module).add("default", () => (
           <h2>The Easiest Way To Grow The Best Cannabis For Beginners</h2>
         </Card.Title>
         <ActionBar likeCount={3} commentCount={1} contributorCount={27} />
+        <ListItem>
+          <Meta
+            avatar={avatar2}
+            alt
+            center
+            title="Rachel Green"
+            subTitle="This is an amazing article! I keep referencing it! Thank you!"
+          />
+        </ListItem>
       </Card>
     </div>
   </div>
