@@ -11,8 +11,8 @@ export default class Input extends Component {
   };
 
   render() {
-    const { placeholder, type, size, fullwidth } = this.props;
-    let classes = classNames("Input", size, { fullwidth });
+    const { placeholder, type, size, fullwidth, plain } = this.props;
+    let classes = classNames("Input", size, { fullwidth, plain });
     return <input placeholder={placeholder} type={type} className={classes} />;
   }
 }

@@ -33,6 +33,45 @@
         p
             font-size: 12px
 
+    &-product
+        display: flex
+        flex-wrap: wrap
+        width: 100%
+
+    &-rating
+        margin: 10px 0 0
+        width: 100%
+
+        
+
+    &-wishlist
+        align-self: flex-end
+        flex-grow: 1
+        justify-content: flex-end
+        display: flex
+
+        a
+            text-align: right
+            cursor: pointer
+
+            &:hover
+                color: $green
+
+                i
+                    color: $green
+
+    &-price
+        margin: 12px 0 4px
+        float: left
+
+        h3
+            font-size: 18px
+            margin: 0
+            color: $green
+            
+    &-container
+        width: 100%
+
     &.withAvatar .Meta-container
         margin-left: 14px
 

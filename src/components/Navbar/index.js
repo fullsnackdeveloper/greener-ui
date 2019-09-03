@@ -49,7 +49,7 @@ export default class Navbar extends Component {
           <div className="Navbar-actions">
             <ul>
               <li>
-                <a>Avatar</a>
+                <a href="#account">Avatar</a>
               </li>
             </ul>
           </div>

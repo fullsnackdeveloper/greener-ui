@@ -32,16 +32,24 @@ export default class Card extends Component {
 
   static Tagline = CardTagline;
 
-  static Image = ({ image }) => (
-    <div className="Card-Image">
-      <div
-        className="Card-Image-image"
-        style={{ backgroundImage: `url(${image})` }}
-      />
+  static Image = ({ image, square, padding, contain }) => (
+    <div className={classNames("Card-Image", { square, padding, contain })}>
+      {!contain && (
+        <div
+          className="Card-Image-image"
+          style={{ backgroundImage: `url(${image})` }}
+        />
+      )}
+      {contain && <img src={image} alt={image} />}
     </div>
   );
 
-  static Title = ({ children }) => <div className="Card-Title">{children}</div>;
+  static Title = ({ children }) => (
+    <div className="Card-Title">
+      {children}
+      <i className="mdi mdi-chevron-right mdi-24px title-arrow" />
+    </div>
+  );
 
   render() {
     const { children, bookmarkable } = this.props;

@@ -3,7 +3,14 @@
 .List
     padding: $cardPadding
 
-.Item
+    .ListItem
+        padding: $cardPadding $cardPadding 0
+
+        &:last-child
+            padding: $cardPadding
+
+
+.ListItem
     width: 100%
     display: flex
     align-items: center
