@@ -4,14 +4,6 @@ import classNames from "classnames";
 import "./Button.sass";
 
 export default class Button extends Component {
-  static defaultProps = {
-    type: "primary",
-    size: "regular",
-    icon: null,
-    onColor: false,
-    fullwidth: false
-  };
-
   render() {
     const { children, type, icon, onColor, size, fullwidth } = this.props;
     let classes = classNames("Button", type, size, fullwidth, {
@@ -30,3 +22,11 @@ export default class Button extends Component {
     );
   }
 }
+
+Button.defaultProps = {
+  type: "primary",
+  size: "regular",
+  icon: null,
+  onColor: false,
+  fullwidth: false
+};

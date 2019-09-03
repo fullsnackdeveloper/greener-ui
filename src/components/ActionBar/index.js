@@ -4,16 +4,6 @@ import classNames from "classnames";
 import "./ActionBar.sass";
 
 export default class ActionBar extends Component {
-  static defaultProps = {
-    like: true,
-    comment: true,
-    share: true,
-    liked: false,
-    commentCount: null,
-    shareCount: null,
-    contributorCount: null
-  };
-
   render() {
     const {
       liked,
@@ -46,3 +36,13 @@ export default class ActionBar extends Component {
     );
   }
 }
+
+ActionBar.defaultProps = {
+  like: true,
+  comment: true,
+  share: true,
+  liked: false,
+  commentCount: null,
+  shareCount: null,
+  contributorCount: null
+};
