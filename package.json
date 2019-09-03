@@ -4,6 +4,7 @@
   "private": false,
   "dependencies": {
     "@mdi/font": "^4.1.95",
+    "babel-cli": "^6.26.0",
     "classnames": "^2.2.6",
     "node-sass": "^4.12.0",
     "react": "^16.9.0",
@@ -41,7 +42,9 @@
     "@storybook/storybook-deployer": "^2.8.1"
   },
   "description": "## Available Scripts",
-  "main": "index.js",
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "files": ["dist", "README.md"],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/fullsnackdeveloper/greener-ui.git"
