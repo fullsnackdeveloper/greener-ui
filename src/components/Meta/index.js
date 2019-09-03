@@ -1,15 +1,10 @@
 import "@mdi/font/css/materialdesignicons.css";
 import React, { Component } from "react";
 import classNames from "classnames";
-import "./Meta.sass";
 import Avatar from "../Avatar";
 import Rating from "../Rating";
 
 export default class Meta extends Component {
-  static defaultProps = {
-    title: "Enter a title"
-  };
-
   renderAvatar(avatar) {
     let newAvatars = avatar;
     if (avatar.length > 3) {
@@ -82,3 +77,7 @@ export default class Meta extends Component {
     );
   }
 }
+
+Meta.defaultProps = {
+  title: "Enter a title"
+};

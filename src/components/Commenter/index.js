@@ -1,7 +1,6 @@
 import "@mdi/font/css/materialdesignicons.css";
 import React, { Component } from "react";
 import classNames from "classnames";
-import "./Commenter.sass";
 import List, { ListItem } from "../List";
 import Meta from "../Meta";
 import Avatar from "../Avatar";
@@ -14,8 +13,6 @@ const avatar2 = (
 );
 
 export default class Commenter extends Component {
-  static defaultProps = {};
-
   render() {
     let classes = classNames("Commenter");
     return (

@@ -1,7 +1,6 @@
 import "@mdi/font/css/materialdesignicons.css";
 import React, { Component } from "react";
 import classNames from "classnames";
-import "./ActionBar.sass";
 
 export default class ActionBar extends Component {
   render() {

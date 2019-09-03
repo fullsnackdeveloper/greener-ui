@@ -1,7 +1,6 @@
 import "@mdi/font/css/materialdesignicons.css";
 import React, { Component } from "react";
 import classNames from "classnames";
-import "./Button.sass";
 
 export default class Button extends Component {
   render() {

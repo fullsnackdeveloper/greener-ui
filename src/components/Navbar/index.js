@@ -2,13 +2,8 @@ import "@mdi/font/css/materialdesignicons.css";
 import React, { Component } from "react";
 import Avatar from "../Avatar";
 import classNames from "classnames";
-import "./Navbar.sass";
 
 export default class Navbar extends Component {
-  static defaultProps = {
-    menuItems: []
-  };
-
   render() {
     const { menuItems, logo } = this.props;
     let classes = classNames("Navbar");
@@ -73,3 +68,7 @@ export default class Navbar extends Component {
     );
   }
 }
+
+Navbar.defaultProps = {
+  menuItems: []
+};

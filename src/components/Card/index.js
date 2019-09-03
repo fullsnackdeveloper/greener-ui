@@ -1,14 +1,9 @@
 import "@mdi/font/css/materialdesignicons.css";
 import React, { Component } from "react";
 import classNames from "classnames";
-import "./Card.sass";
 
 class CardTagline extends Component {
-  static defaultProps = {
-    trunkateAt: 150
-  };
   trunkate = (amount, string) => {
-    console.log(amount, string);
     let trunkedString = string;
     if (string.length <= amount) {
       return string;
@@ -23,9 +18,11 @@ class CardTagline extends Component {
   }
 }
 
-export default class Card extends Component {
-  static defaultProps = {};
+CardTagline.defaultProps = {
+  trunkateAt: 150
+};
 
+export default class Card extends Component {
   static Header = ({ children }) => (
     <div className="Card-Header">{children}</div>
   );

@@ -1,7 +1,5 @@
-import {
-  configure
-} from "@storybook/react";
-import "../src/styles/_global.sass";
+import { configure } from "@storybook/react";
+import "../src/styles/all.css";
 
 const req = require.context("../src", true, /\.stories.js$/);
 

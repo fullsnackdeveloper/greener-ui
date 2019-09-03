@@ -1,11 +1,8 @@
 import "@mdi/font/css/materialdesignicons.css";
 import React, { Component } from "react";
 import classNames from "classnames";
-import "./Rating.sass";
 
 export default class Rating extends Component {
-  static defaultProps = {};
-
   renderRating = () => {
     const rate = [];
     for (let step = 0; step < 5; step++) {

@@ -1,7 +1,6 @@
 import "@mdi/font/css/materialdesignicons.css";
 import React, { Component } from "react";
 import classNames from "classnames";
-import "./List.sass";
 
 export class ListItem extends Component {
   render() {

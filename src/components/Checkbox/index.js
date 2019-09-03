@@ -1,15 +1,8 @@
 import "@mdi/font/css/materialdesignicons.css";
 import React, { Component } from "react";
 import classNames from "classnames";
-import "./Checkbox.sass";
 
 export default class Checkbox extends Component {
-  static defaultProps = {
-    type: "text",
-    placeholder: "Text",
-    size: "regular"
-  };
-
   constructor() {
     super();
 
@@ -47,3 +40,9 @@ export default class Checkbox extends Component {
     );
   }
 }
+
+Checkbox.defaultProps = {
+  type: "text",
+  placeholder: "Text",
+  size: "regular"
+};
