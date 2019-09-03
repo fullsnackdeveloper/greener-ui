@@ -1,0 +1,18 @@
+@import "../../styles/_variables.scss"
+    
+.FormRow
+    display: flex
+    width: calc(100% - #{$cardPadding * 2})
+    justify-content: space-between
+    padding: $cardPadding
+
+    &.plain
+        align-items: center
+        width: 100%
+        padding: 0
+
+    .Button:last-child
+        border-radius: 0 $borderRadius $borderRadius 0
+
+    .Input:first-child
+        border-radius: $borderRadius 0 0 $borderRadius
