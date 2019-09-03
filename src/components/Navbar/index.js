@@ -1,5 +1,6 @@
 import "@mdi/font/css/materialdesignicons.css";
 import React, { Component } from "react";
+import Avatar from "../Avatar";
 import classNames from "classnames";
 import "./Navbar.sass";
 import Logo from "../../img/greener-logo.png";
@@ -49,7 +50,22 @@ export default class Navbar extends Component {
           <div className="Navbar-actions">
             <ul>
               <li>
-                <a href="#account">Avatar</a>
+                <a href="#search">
+                  <i className="mdi mdi-magnify" />
+                </a>
+              </li>
+              <li>
+                <a href="#search">
+                  <Avatar
+                    size="tiny"
+                    image="https://images.unsplash.com/photo-1535441577682-5a7bc0702a7d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80"
+                  />
+                </a>
+              </li>
+              <li>
+                <a href="#search">
+                  <i className="mdi mdi-cart-outline" />
+                </a>
               </li>
             </ul>
           </div>

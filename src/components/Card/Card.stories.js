@@ -6,18 +6,26 @@ import Meta from "../Meta";
 import ActionBar from "../ActionBar";
 import { ListItem } from "../List";
 import Rating from "../Rating";
+import Commenter from "../Commenter";
 
 const avatar = (
   <Avatar image="https://images.unsplash.com/photo-1498507201412-ab62bad37273?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=700&q=80" />
 );
 
-const avatar2 = (
-  <Avatar image="https://images.unsplash.com/photo-1531750026848-8ada78f641c2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80" />
-);
-
 const avatarGreener = (
   <Avatar image="https://greener.tips/wp-content/uploads/2019/07/GreenrFavicon_228x228.png" />
 );
+
+const comments = [
+  {
+    name: "Rachel Green",
+    comment: "This is an amazing article! I keep referencing it! Thank you!"
+  },
+  {
+    name: "Ross Gellor",
+    comment: "We were on a break!"
+  }
+];
 
 storiesOf("Basic | Card", module)
   .add("default", () => (
@@ -43,15 +51,7 @@ storiesOf("Basic | Card", module)
             <h2>The Easiest Way To Grow The Best Cannabis For Beginners</h2>
           </Card.Title>
           <ActionBar likeCount={3} commentCount={1} contributorCount={27} />
-          <ListItem>
-            <Meta
-              avatar={avatar2}
-              alt
-              center
-              title="Rachel Green"
-              subTitle="This is an amazing article! I keep referencing it! Thank you!"
-            />
-          </ListItem>
+          <Commenter comments={comments} />
         </Card>
       </div>
     </div>
@@ -103,15 +103,7 @@ storiesOf("Basic | Card", module)
             <Rating rating={4} reviewCount={6} />
           </Card.Title>
           <ActionBar likeCount={3} commentCount={1} contributorCount={10} />
-          <ListItem>
-            <Meta
-              avatar={avatar2}
-              alt
-              center
-              title="Rachel Green"
-              subTitle="This is an amazing article! I keep referencing it! Thank you!"
-            />
-          </ListItem>
+          <Commenter comments={comments} />
         </Card>
       </div>
     </div>
