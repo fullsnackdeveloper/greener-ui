@@ -3,7 +3,6 @@ import React, { Component } from "react";
 import Avatar from "../Avatar";
 import classNames from "classnames";
 import "./Navbar.sass";
-import Logo from "../../img/greener-logo.png";
 
 export default class Navbar extends Component {
   static defaultProps = {
@@ -11,14 +10,14 @@ export default class Navbar extends Component {
   };
 
   render() {
-    const { menuItems } = this.props;
+    const { menuItems, logo } = this.props;
     let classes = classNames("Navbar");
     return (
       <div className={classes}>
         <div className="Navbar-container">
           <div className="Navbar-nav">
             <div className="Navbar-logo">
-              <img src={Logo} alt="greener-logo" />
+              <img src={logo} alt="greener-logo" />
             </div>
             <nav>
               <ul>
